@@ -1,0 +1,20 @@
+# Editor files
+/.vscode
+
+# node modules
+/node_modules
+
+# web folder
+/www
+
+# platform
+/platforms
+
+# plugin
+/plugins
+
+# cordova typings files
+/typings
+
+# gradle folder
+/.gradle
