@@ -14,7 +14,8 @@ import { OneSignal } from '@ionic-native/onesignal/ngx';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  login: login = { email: 'tulsi@gmail.com', password: '123456' };
+  // login: login = { email: 'tulsi@gmail.com', password: '123456' };
+  login: login = { email: '', password: '' };
   submitted = false;
   isLogin: boolean = false;
   constructor(
