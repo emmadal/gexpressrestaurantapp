@@ -38,6 +38,7 @@ export class OrderDetailPage implements OnInit {
   paid: any;
   orderString: any[] = [];
   loaded: boolean;
+  verificationCode: any;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -200,6 +201,7 @@ export class OrderDetailPage implements OnInit {
         this.total = data.total;
         this.address = data.vid.address;
         this.restName = data.vid.name;
+        this.verificationCode = data.verificationCode
         this.deliveryAddress = data.address.address;
         if (data && data.vid && data.vid.lat) {
           this.userLat = data.vid.lat;
@@ -318,11 +320,11 @@ export class OrderDetailPage implements OnInit {
 
   printOrder() {
     const options: PrintOptions = {
-      name: 'Foodie Order Summary',
+      name: 'GExpress Order Summary',
       duplex: false,
     };
     const order = this.orderString.join('');
-    const content = '<div style="padding: 20px;display: flex;flex-direction: column;"> <img src="assets/icon.png" style="text-align: center; height: 100px;width: 100px;" alt=""> <h2 style="text-align: center;">Foodies Order Summary</h2> <p style="float: left;margin:0px;"><b>' +
+    const content = '<div style="padding: 20px;display: flex;flex-direction: column;"> <img src="assets/icon.png" style="text-align: center; height: 100px;width: 100px;" alt=""> <h2 style="text-align: center;">GExpress Order Summary</h2> <p style="float: left;margin:0px;"><b>' +
       this.id + '</b></p> <p style="float: left;margin:0px;"><b>' + this.restName + '</b></p> <p style="float: left;margin:0px;"><b>' + this.userName + '</b></p> <p style="float: left;margin:0px;">' + this.time + ' </p> <p style="font-weight: bold;margin:0px;">' + this.util.translate('ITEMS') + '</p> ' + order + ' <p style="border-bottom: 1px solid black;margin:0px;"><span style="float: left;font-weight: bold;">' + this.util.translate('SubTotal') + '</span> <span style="float: right;font-weight: bold;">' + this.getCurrency() + this.total + '</span> <p style="border-bottom: 1px solid black;"><span style="float: left;font-weight: bold;">' + this.util.translate('Delivery Charge') + '</span> <span style="float: right;font-weight: bold;">' + this.getCurrency() + '5</span> </p> <p style="border-bottom: 1px solid black;"><span style="float: left;font-weight: bold;">' + this.util.translate('Service Tax') + '</span> <span style="float: right;font-weight: bold;">' + this.getCurrency() +
       this.serviceTax + '</span> </p> <p style="border-bottom: 1px solid black;"><span style="float: left;font-weight: bold;">' + this.util.translate('Total') + '</span> <span style="float: right;font-weight: bold;">' + this.getCurrency() + this.grandTotal + '</span> </p> <h1 style="text-align: center;text-transform: uppercase;">' + this.paid + '</h1> </div>';
     this.printer.print(content, options).then((data) => {

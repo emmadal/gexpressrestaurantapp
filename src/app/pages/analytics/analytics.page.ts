@@ -96,7 +96,7 @@ export class AnalyticsPage implements OnInit {
             others.push(element);
           }
         });
-        this.totalEarning = parseFloat(this.totalEarning).toFixed(2);
+        this.totalEarning = parseFloat(this.totalEarning).toFixed(0);
         console.log('new order', newOrders);
         this.pieChartData = [];
         this.pieChartData.push(newOrders.length); // new orders
@@ -149,7 +149,7 @@ export class AnalyticsPage implements OnInit {
             }
           }
         });
-        this.totalEarning = parseFloat(this.totalEarning).toFixed(2);
+        this.totalEarning = parseFloat(this.totalEarning).toFixed(0);
         console.log('new order', newOrders);
         this.pieChartData = [];
         this.pieChartData.push(newOrders.length); // new orders

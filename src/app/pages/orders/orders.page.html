@@ -37,7 +37,7 @@
           <div style="margin-left: 10px;">
             <ion-label class="res_name">{{item.uid.fullname}}</ion-label>
             <ion-label class="res_location">{{item.time}}</ion-label>
-            <ion-label class="res_location">{{item.id}}</ion-label>
+            <ion-label class="res_location">{{'Order ID' | translate}}: {{item.id}}</ion-label>
           </div>
 
           <!-- <div class="order_id">
@@ -67,7 +67,7 @@
                     - {{addods.name}}
                   </p>
                   <p class="sub_name">
-                    {{getCurrency()}} {{addods.value}}
+                    {{addods.value}} {{getCurrency()}}
                   </p>
                 </div>
               </div>
@@ -75,8 +75,10 @@
           </div>
           <ion-label class="head_gray">{{'ORDERED ON' | translate}}</ion-label>
           <ion-label class="small_lbl">{{item.time}} </ion-label>
+          <ion-label class="head_gray">{{'ORDER VALIDATION CODE' | translate}}</ion-label>
+          <ion-label class="small_lbl">{{item.verificationCode}} </ion-label>
           <ion-label class="head_gray">{{'TOTAL AMOUNT' | translate}}</ion-label>
-          <ion-label class="small_lbl">{{getCurrency()}}{{item.grandTotal}}</ion-label>
+          <ion-label class="small_lbl">{{item.grandTotal}} {{getCurrency()}}</ion-label>
         </div>
 
       </div>
@@ -107,7 +109,7 @@
           <div style="margin-left: 10px;">
             <ion-label class="res_name">{{item.uid.fullname}}</ion-label>
             <ion-label class="res_location">{{item.time}}</ion-label>
-            <ion-label class="res_location">{{item.id}}</ion-label>
+            <ion-label class="res_location">{{'Order ID'}}: {{item.id}}</ion-label>
           </div>
 
           <!-- <div class="order_id">
@@ -137,7 +139,7 @@
                     - {{addods.name}}
                   </p>
                   <p class="sub_name">
-                    {{getCurrency()}} {{addods.value}}
+                    {{addods.value}} {{getCurrency()}}
                   </p>
                 </div>
               </div>
@@ -145,8 +147,10 @@
           </div>
           <ion-label class="head_gray">{{'ORDERED ON' | translate}}</ion-label>
           <ion-label class="small_lbl">{{item.time}} </ion-label>
+          <ion-label class="head_gray">{{'ORDER VALIDATION CODE' | translate}}</ion-label>
+          <ion-label class="small_lbl">{{item.verificationCode}} </ion-label>
           <ion-label class="head_gray">{{'TOTAL AMOUNT' | translate}}</ion-label>
-          <ion-label class="small_lbl">{{getCurrency()}}{{item.grandTotal}}</ion-label>
+          <ion-label class="small_lbl">{{item.grandTotal}} {{getCurrency()}}</ion-label>
         </div>
 
       </div>
@@ -177,7 +181,7 @@
           <div style="margin-left: 10px;">
             <ion-label class="res_name">{{item.uid.fullname}}</ion-label>
             <ion-label class="res_location">{{item.time}}</ion-label>
-            <ion-label class="res_location">{{item.id}}</ion-label>
+            <ion-label class="res_location">{{'Order ID' | translate}}: {{item.id}}</ion-label>
           </div>
 
           <!-- <div class="order_id">
@@ -207,7 +211,7 @@
                     - {{addods.name}}
                   </p>
                   <p class="sub_name">
-                    {{getCurrency()}} {{addods.value}}
+                    {{addods.value}} {{getCurrency()}}
                   </p>
                 </div>
               </div>
@@ -215,15 +219,13 @@
           </div>
           <ion-label class="head_gray">{{'ORDERED ON' | translate}}</ion-label>
           <ion-label class="small_lbl">{{item.time}} </ion-label>
+          <ion-label class="head_gray">{{'ORDER VALIDATION CODE' | translate}}</ion-label>
+          <ion-label class="small_lbl">{{item.verificationCode}} </ion-label>
           <ion-label class="head_gray">{{'TOTAL AMOUNT' | translate}}</ion-label>
-          <ion-label class="small_lbl">{{getCurrency()}}{{item.grandTotal}}</ion-label>
+          <ion-label class="small_lbl">{{item.grandTotal}} {{getCurrency()}}</ion-label>
         </div>
 
       </div>
     </div>
-
-
-
-
   </div>
 </ion-content>

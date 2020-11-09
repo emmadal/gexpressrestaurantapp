@@ -18,6 +18,7 @@ export class OrdersPage implements OnInit {
   onGoingOrders: any[] = [];
   oldOrders: any[] = [];
   dummy = Array(50);
+  verificiationCode: any = "";
   constructor(
     private api: ApisService,
     private util: UtilService,

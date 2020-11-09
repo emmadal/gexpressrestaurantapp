@@ -23,8 +23,8 @@ export const environment = {
     sk: "sk_test_51HaPTFE8iA9NPA6ugoVi3U8UjCNkPifc2bofV2biL62uknERnDmNgmqLzFP4j2ZSLsOOrzknE4Dxt39doHM2K5fp00A9IlVxGY",
   },
   general: {
-    symbol: '$',
-    code: 'USD'
+    symbol: 'GNF',
+    code: 'GNF'
   }
 };
 
