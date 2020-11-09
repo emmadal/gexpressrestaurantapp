@@ -126,5 +126,4 @@
     </plugin>
     <plugin name="cordova-plugin-nativeaudio" spec="^3.0.9" />
     <engine name="android" spec="^8.0.0" />
-    <engine name="ios" spec="4.5.5" />
 </widget>
