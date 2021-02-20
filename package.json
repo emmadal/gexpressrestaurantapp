@@ -1,7 +1,7 @@
 {
-  "name": "old",
-  "version": "0.0.1",
-  "author": "Ionic Framework",
+  "name": "gexpressreataurant",
+  "version": "1.0.0",
+  "author": "Technologies Genial",
   "homepage": "https://ionicframework.com/",
   "scripts": {
     "ng": "ng",
