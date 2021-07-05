@@ -38,6 +38,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "angularfire2": "^5.1.2",
     "chart.js": "^2.8.0",
+    "cordova": "^10.0.0",
     "cordova-plugin-android-permissions": "^1.0.2",
     "cordova-plugin-camera": "^4.1.0",
     "cordova-plugin-device": "^2.0.3",
@@ -58,6 +59,7 @@
     "ng2-charts": "^1.6.0",
     "onesignal-cordova-plugin": "^2.10.1",
     "rxjs": "~6.5.1",
+    "sharp": "^0.28.3",
     "sweetalert2": "^9.10.12",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -73,6 +75,8 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "^5.0.0",
+    "cordova-android": "^9.1.0",
+    "cordova-browser": "^6.0.0",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -115,6 +119,9 @@
       },
       "cordova-plugin-nativeaudio": {}
     },
-    "platforms": []
+    "platforms": [
+      "android",
+      "browser"
+    ]
   }
 }
