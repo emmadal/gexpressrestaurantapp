@@ -31,7 +31,7 @@ export class AddNewFoodsPage implements OnInit {
   isEdit: boolean = false;
   ratting: any;
   id: any;
-  veg: boolean = true;
+  veg: boolean = false;
   status: boolean;
   // variation: boolean = false;
   // smallPrice: any;

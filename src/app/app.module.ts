@@ -31,6 +31,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Printer } from '@ionic-native/printer/ngx';
 import { NativeAudio } from '@ionic-native/native-audio/ngx';
 import { NewOrderPageModule } from './pages/new-order/new-order.module';
+import { ServiceWorkerModule } from '@angular/service-worker';
 export function customTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -59,6 +60,12 @@ export function LanguageLoader(http: HttpClient) {
         useFactory: customTranslateLoader,
         deps: [HttpClient]
       }
+    }),
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
   providers: [
